@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+.body{
+    width: 100%;
+}
+.shop {
+    width: 100%;
+    background-color: white;
+    padding:100px 0;
+}
+.shop-wrapper {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 45px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.shop-aside {
+    width: 300px;
+    background-color: rgba(251, 247, 246, 1);
+    padding: 30px 9px 40px 16px;
+    border-radius: 15px;
+}
+.shop-aside-form-item {
+    display: block;
+    border-bottom: 1px solid #EFEFEF;
+    padding-top: 15px; 
+}
+.shop-aside-form-item:first-child {
+    padding-top: 0; 
+}
+
+.shop-aside-form-item__check {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+.shop-aside-form-item__title {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: #371030;
+    padding-bottom: 15px;
+}
+.shop-label {
+    position: relative;
+    padding-left: 30px;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #371030;
+    padding-left: 45px;
+}
+.shop-label::before {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #C4C4C4;
+}
+.shop-label::after {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    background-color: rgba(255, 176, 186, 1);  
+    opacity: 0;
+    transition: 0.3s;
+}
+.shop-checkbox {
+    display: none;
+}
+.shop-checkbox:checked + .shop-label::after{
+    opacity: 1;
+  }
+
+
+
+.shop-label-tag {
+    position: relative;
+    width: max-content;
+    height: initial;
+    border-radius: 20px;
+    padding-left: 30px;
+    border: 2px solid rgba(255, 176, 186, 1);
+    font-family: 'Montserrat';
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #371030;
+    padding: 5px 15px;
+}
+
+.shop-label-tag::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 19px;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 176, 186, 0.5);  
+    opacity: 0;
+    transition: 0.3s;
+}
+.shop-checkbox-tag {
+    display: none;
+}
+.shop-checkbox-tag:checked + .shop-label-tag::after {
+    opacity: 1;
+} 
+
+/* Не работает */
+.shop-checkbox-tag:checked .shop-label-tag {
+    color: white;
+    z-index: 4;
+} 
+
+
+.feedback {
+    width: 100%;
+    height: max-content;
+    background-color: #FBF7F6;
+    padding: 90px 0;
+}
+.feedback-wrapper {
+    max-width: 1334px;
+    display: flex;
+    flex-direction: row; 
+    margin: 0 auto;
+}
+.feedback-background {
+    position: absolute;
+    left: 270px;
+    bottom: -50px;
+    z-index: 1;
+}
+.feedback-form {
+    position: relative;
+    width: 60%;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    z-index: 5;
+}
+.feedback-form__title {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    color: #371030; 
+}
+.feedback-form-block {
+    width: 50%;
+}
+.feedback-form-block_form {
+padding: 31px 40px 40px 40px;
+}
+
+.feedback-form__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.feedback-form__form-item {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.item_short {
+    width: 45%;
+}
+.item_long {
+    width: 100%;
+}
+.feedback-form__form-item input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(55, 16, 48, 1);
+    padding: 10px 1px;
+    background: transparent;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #371030;
+    
+}
+.feedback-form__form-item input:focus {
+    outline: none;
+    background-color: rgba(249, 240, 238, 1);
+    border: 1px solid silver;
+    border-bottom: 1px solid rgba(55, 16, 48, 1);
+    border-radius: 2px 2px 0 0;
+}
+.feedback-form__form-item input::placeholder {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #371030;
+}
+.feedback-form__form-item textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(55, 16, 48, 1);
+    padding: 10px 1px;
+    background: transparent;
+    resize: none;
+}
+.feedback-form__form-item textarea::placeholder {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #371030;
+}
+.feedback-img {
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/img/feedback-cover.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.feedback-form__form-item button {
+    width: 100%;
+    background-color: rgba(255, 176, 186, 1);
+    border: 1px solid transparent;
+    border-radius: 100px;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #9A3C48;
+    padding: 17px 0;
+    box-shadow: 3px 3px 0px 3px #DE8E98;
+}
+.review {
+    width: 100%;
+    background-color: white;
+    padding: 55px 0;
+    
+    
+    margin-top: 20px;
+}
+.review-form {
+    width: 100%;
+}
+.review-wrapper {
+    max-width: 1115px;
+    margin: 0 auto;
+    padding: 0 15px;
+    background-color: #FBF7F6;
+    border-radius: 15px;
+    padding: 38px 50px 50px 50px;
+}
+
+.review-form__title {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #371030;
+    padding-bottom: 15px;
+}
+.review-form__form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    justify-content: space-between;
+}
+.review-form-block {
+    width: 100%;
+    display: flex;
+    column-gap: 37px;
+}
+.review-form__form-textarea {
+    width: 100%;
+}
+.review-form__form-textarea textarea {
+    width: 100%;
+    height: 188px;
+    resize: none;
+    background: #F9F0EE;
+    border: none;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #000000;
+    padding: 18px 25px;
+}
+.review-form__form-textarea textarea:focus,
+.review-form__form-input input:focus {
+    outline: none;
+    border: 2px solid rgba(255, 176, 186, 0.5);
+}
+.review-form__form-textarea textarea::placeholder {
+    /* font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #000000; */
+    opacity: 0.5;
+}
+.review-form__form-input {
+    width: 32%;
+    height: 41px;
+}
+.review-form__form-input input{
+    width: 100%;
+    height: 100%;
+    background: #F9F0EE;
+    border: none;
+}
+.review-form__form-input input::placeholder {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #000000;
+    opacity: 0.5;
+    padding: 12.5px 25px;
+}
+
+.review-form__form-button button {
+    width: 250px;
+    background-color: rgba(255, 176, 186, 1);
+    border: 1px solid transparent;
+    border-radius: 100px;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #9A3C48;
+    padding: 17px 0;
+    box-shadow: 3px 3px 0px 3px #DE8E98;
+}
+.review-form__form-check {
+    padding-left: 30px;
+    margin: auto 0;
+}
+.review-form__form-check input {
+    opacity: 0;
+}
+.review-label{
+    position: relative;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #000000;
+    opacity: 0.5;
+}
+.review-label:before {
+    position: absolute;
+    content: "";
+    width: 26px;
+    height: 23px;
+    left: -40px;
+    top: -5px;
+    border-radius: 5px;
+    background: #F9F0EE;
+}
+.review-label:after {
+    position: absolute;
+    content: url("../assets/svg/check.svg");
+    width: initial;
+    height: initial;
+    left: -34px;
+    top: -8px;
+    opacity: 0; 
+}
+
+.review-checkbox:checked + .review-label::after {
+    opacity: 1;
+} 
