@@ -62,7 +62,7 @@
         &-wrapper {
             width: 100%;
             display: flex;
-            padding: 0 135px;
+            
         }
         &-logo {
             margin-right: 47px;
@@ -95,6 +95,10 @@
     color: #371030;
     border-color: transparent;
     outline: none;
+    box-shadow: 0 0 0 0.2rem transparent;
 }
 
+.show>.btn-secondary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem transparent;
+}
 
